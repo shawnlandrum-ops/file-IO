@@ -2,6 +2,6 @@
 
 1. The goal is to use a csv file that has a word and 2 numbers for each of the 6 rows, the sum of the 2 numbers determines how many times each word will be printed.
 2. i will use 2 converters (convertA,B using std::stringstream), 2 string variables (sIntA,B using std::stringstream), and 2 integer variables (intA,B) for the numbers on each row of the csv file and std::string text for the words in each row of the file, for the variables to get what it needs to achieve the goal, i'll use std::ifstream file to read data.csv, a while(getline(file,line)) function for every line, std::stringstream ss to get each whole line, std::string line for line reading function
-3. the variables ss and convertA & B will be cleared to "" to read and take variables from the file
+3. the variables ss and convertA & B will be cleared to "" to read and take variables from the file properly
 4. for the two integers (that are currently strings in the csv file) i'll have the variables sIntA & B take the strings from the csv file using getline(ss,sInt,',') (',' is for value separation in csv file) since putting the string value to a converter (sIntA>>convertA & sIntB>>convertB in this case) is the only way to assign the integer values from each line of the file, then the converters will give the values to intA & intB. for the words, i'll only use getline(ss,text) (assign word to value text) since it is already a string
 5. i will use a for loop, taking the sum of intA & B of the same line in the file to print the value of text that many times in one line separated by spaces
